@@ -9,7 +9,7 @@ const PokemonPage = () => {
   useEffect(() => {
     const fetchPokemonData = async () => {
       try {
-        const pokemonNames = ['milotic', 'wigglytuff', 'gothitelle', 'pignite', 'teddiursa', 'ninetales'];
+        const pokemonNames = ['alakazam', 'snorlax', 'dragonite', 'charizard', 'gengar', 'machamp'];
         const promises = pokemonNames.map(name => fetch(`https://pokeapi.co/api/v2/pokemon/${name}`));
         const responses = await Promise.all(promises);
         const data = await Promise.all(responses.map(response => response.json()));
@@ -48,5 +48,3 @@ const PokemonPage = () => {
 };
 
 export default PokemonPage;
-
-
